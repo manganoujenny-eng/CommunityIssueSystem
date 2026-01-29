@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(com.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 120vh;
+}
+.container{
+    display: flex;
+    gap: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 500px;
+    height: 650px;
+    letter-spacing: 1px;
+}
+.logo{
+    height: 130px;
+    width: 130px; border-radius: 50%;
+    overflow: hidden; object-fit: cover;
+    margin-top: 30px;
+}
+img{
+    height: 100%; width: 100%;
+}
+.ins{
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%);
+    height: auto; padding-bottom: 20px;
+    width: 400px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgb(37, 37, 37);
+}
+.ins h2{
+    width: 300px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #584dec;
+    font-size: 22px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+
+}
+.ins input{
+     width: 300px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid#584dec;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+.ins input:focus{
+    outline: none;
+}
+.ins button{
+    width: 250px;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    background: #584dec;
+    color:white;
+    cursor:pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease-in;
+}
+.ins button:hover{
+    background: #584dec;
+}
+a{
+    text-decoration: none;
+    color: rgb(41, 41, 40);
+}
+em{
+    color: white;
+}
+#signupForm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.form{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 250px;
+    height: auto;
+    background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%);
+    position: absolute;
+    border-radius: 10px;
+    padding: 25px;
+}
+.form .logo{
+    transform: translate(50%, -10%);
+    text-align: center;
+}
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #584dec;
+    font-size: 22px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid#584dec;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+.form input:focus{
+    outline: none;
+}
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #584dec;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #584dec;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CRIRS</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">DESIGN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+                </div>
+                 <div class="search">
+                <input class="srch" type="search" name="" placeholder="Search">
+                <a href="#"><button class="btnn">Search</button></a>
+            </div>
+        </div>
+
+         <div class="container">
+        <div class="header">
+            <h1>Issue related files</h1>
+        </div>
+
+        <div class="destination">
+            <label for="destination-folder">Document Destination:</label>
+            <select id="destination-folder">
+                <option value="documents">Documents</option>
+                <option value="images">Images</option>
+                <option value="archives">Archives</option>
+                <option value="custom">Personnalise...</option>
+            </select>
+        </div>
+
+        <div class="content">
+            <div class="drop-zone" id="dropZone">
+                <i class="icon icon-image" style="font-size: 48px;"></i>
+                <div class="title">Send your forms here</div>
+                <div class="subtitle">or</div>
+                <!-- replace button by label -->
+                <label for="fileInput" class="btn btn-primary" id="browseBtn">Search</label>
+                <input type="file" id="fileInput" multiple style="display: none;">
+                <div class="help-text">Support Format: JPG, PNG, PDF, DOCX, XLSX (max 10Mo par file)</div>
+            </div>
+
+            <div class="file-list-container">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="image">Images</button>
+                    <button class="filter-btn" data-filter="pdf">PDF</button>
+                    <button class="filter-btn" data-filter="word">Documents</button>
+                    <button class="filter-btn" data-filter="other">Others</button>
+                </div>
+
+                <div class="file-list">
+                    <div class="file-list-header">
+                        <div class="file-icon"></div>
+                        <div>Name</div>
+                        <div>Type</div>
+                        <div class="size">Size</div>
+                        <div class="progress">Progression</div>
+                        <div></div>
+                    </div>
+                    <div class="file-list-body" id="fileData"></div>
+                    <div id="filesContainer">
+                        <!-- Les fichiers seront ajoutés ici dynamiquement -->
+                     </div>
+                    <!-- <div class="file-list-body" id=""></div> --> 
+                </div> 
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-secondary" id="cancelAllBtn">Cancel</button>
+            <button class="btn btn-primary" id="importAllBtn">import</button>
+            
+        </div>
+        <input type="file" id="file" hidden>
+    </div>
+    <script>
+         document.getElementById("fileInput").addEventListener('change', function(){
+    const file= this.files[0];
+    const filename= file.name;
+    console.log ("le nom du fichier est:"+" "+ +filename);
+    const filesize= ((file.size)/1024).toFixed(2);
+    const extension= filename.substring(filename.indexOf('.')).toLowerCase();
+         document.getElementById("fileData").innerHTML='<div class="file-list-header"><div class="file-icon"></div><div>'+filename+'</div><div>'+extension+'</div><div class="size">'+filesize+'ko</div><div class="progress">Progression</div></div></div> </div>';
+          });
+    </script>
+<!-- <script src="script.js"></script> -->
+  <script src="script/jquery.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>
