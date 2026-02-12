@@ -1,0 +1,200 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  MEMBER
+  LEADER
+  ADMIN
+}
+
+enum IssueCategory {
+  WATER
+  ROAD
+  SANITATION
+  ELECTRICITY
+  OTHER
+}
+
+enum IssueStatus {
+  PENDING
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+enum IssuePriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum TransactionType {
+  INCOME
+  EXPENSE
+}
+
+enum TransactionCategory {
+  DONATION
+  LEVY
+  REPAIR
+  LABOR
+  EQUIPMENT
+  OTHER
+}
+
+enum ReportType {
+  FINANCIAL
+  ISSUE
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(MEMBER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  profile   Profile?
+  issuesReported Issue[] @relation("ReportedIssues")
+  issuesAssigned Issue[] @relation("AssignedIssues")
+  comments       IssueComment[]
+  transactions   Transaction[]
+  reports        Report[]
+  dashboards     Dashboard[]
+  announcements  Announcement[]
+}
+
+model Profile {
+  id       String @id @default(cuid())
+  userId   String @unique
+  user     User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  avatar   String?
+  phone    String?
+  address  String?
+  joinDate DateTime @default(now())
+}
+
+model Issue {
+  id           String        @id @default(cuid())
+  title        String
+  description  String
+  category     IssueCategory
+  status       IssueStatus   @default(PENDING)
+  priority     IssuePriority @default(MEDIUM)
+  location     String?
+  reportedById String
+  reportedBy   User          @relation("ReportedIssues", fields: [reportedById], references: [id])
+  assignedToId String?
+  assignedTo   User?         @relation("AssignedIssues", fields: [assignedToId], references: [id])
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  resolvedAt   DateTime?
+
+  comments    IssueComment[]
+  attachments IssueAttachment[]
+}
+
+model IssueComment {
+  id        String   @id @default(cuid())
+  issueId   String
+  issue     Issue    @relation(fields: [issueId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  comment   String
+  createdAt DateTime @default(now())
+}
+
+model IssueAttachment {
+  id         String   @id @default(cuid())
+  issueId    String
+  issue      Issue    @relation(fields: [issueId], references: [id], onDelete: Cascade)
+  url        String
+  filename   String
+  uploadedAt DateTime @default(now())
+}
+
+model Transaction {
+  id          String              @id @default(cuid())
+  type        TransactionType
+  category    TransactionCategory
+  amount      Float
+  description String
+  date        DateTime            @default(now())
+  createdById String
+  createdBy   User                @relation(fields: [createdById], references: [id])
+  receipt     String?
+  projectId   String?             // Optional link to specific project/issue
+}
+
+model Budget {
+  id              String   @id @default(cuid())
+  year            Int
+  month           Int
+  category        TransactionCategory
+  allocatedAmount Float
+  spentAmount     Float    @default(0)
+  notes           String?
+
+  @@unique([year, month, category])
+}
+
+model Report {
+  id            String     @id @default(cuid())
+  type          ReportType
+  generatedById String
+  generatedBy   User       @relation(fields: [generatedById], references: [id])
+  parameters    Json?
+  url           String?    // URL to generated PDF/CSV
+  createdAt     DateTime   @default(now())
+}
+
+model Dashboard {
+  id      String @id @default(cuid())
+  userId  String
+  user    User   @relation(fields: [userId], references: [id])
+  layout  Json?
+  widgets Json?
+}
+
+model KPI {
+  id       String  @id @default(cuid())
+  name     String
+  value    Float
+  target   Float
+  period   String? // e.g., "MONTHLY", "YEARLY"
+  unit     String? // e.g., "%", "USD"
+  category String?
+}
+
+model Recommendation {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  type        String?
+  priority    String?
+  generatedAt DateTime @default(now())
+  appliedAt   DateTime?
+  metrics     Json?
+}
+
+model Announcement {
+  id        String   @id @default(cuid())
+  title     String
+  content   String
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
