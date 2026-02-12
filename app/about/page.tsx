@@ -33,13 +33,13 @@ export default function AboutPage() {
                             <AccordionItem value="item-1">
                                 <AccordionTrigger>How do I report an issue?</AccordionTrigger>
                                 <AccordionContent>
-                                    Navigate to the "Issues" tab after logging in. Click on "Report Issue", fill in the details including the type of issue (e.g., Water, Road) and its location, and submit. You can track its status in "My Issues".
+                                    Navigate to the &quot;Issues&quot; tab after logging in. Click on &quot;Report Issue&quot;, fill in the details including the type of issue (e.g., Water, Road) and its location, and submit. You can track its status in &quot;My Issues&quot;.
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="item-2">
                                 <AccordionTrigger>Who can see my report?</AccordionTrigger>
                                 <AccordionContent>
-                                    Your report is visible to Community Leaders and Admins immediately. Other members can see it if it's marked as public, which helps in avoiding duplicate reports for the same problem.
+                                    Your report is visible to Community Leaders and Admins immediately. Other members can see it if it&apos;s marked as public, which helps in avoiding duplicate reports for the same problem.
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="item-3">
@@ -51,7 +51,7 @@ export default function AboutPage() {
                             <AccordionItem value="item-4">
                                 <AccordionTrigger>How can I apply for a grant?</AccordionTrigger>
                                 <AccordionContent>
-                                    Grant opportunities are posted in the "Announcements" section on the homepage and dashboard. Application instructions will be provided within each announcement.
+                                    Grant opportunities are posted in the &quot;Announcements&quot; section on the homepage and dashboard. Application instructions will be provided within each announcement.
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
