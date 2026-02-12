@@ -1,57 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebPage Design</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRIRS Project</title>
+<!-- Add to head -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main">
-         <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">CRIRS</h2>
-            </div>
 
-            <div class="menu">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICE</a></li>
-                    <li><a href="#">DESIGN</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </div>
-            <div class="search">
-                <input class="srch" type="search" name="" placeholder="Search">
-                <a href="#"><button class="btn">Search</button></a>
-            </div>
-         </div>
-         <div class="content">
-            <h1>Web Design on <br><span>Community Resource &<br>Issue Reporting System</span></h1>
-            <p class="par">It is a digital platform that enables citizens to report incidents in their communities & <br> allows authorities to receive, manage, and respond to these reports efficiently. <br>It improves communication, transparency, and response time in public service delivery.</p>
-           
-            <button class="cn"><a href="role.html">Join Us</a></button>
-            <div class="form">
-                <h2>Login Here</h2>
-                <input type="email" name="email" placeholder="Enter your email">
-                <input type="password" name="" placeholder="Enter your password">
-                <button class="btnn"><a href="role.html">Login</a></button>
-                
-                <p class="link">Don't have an account<br>
-                <a href="#">Sign up </a>here</p>
-                <p class="liw">Log in with</p>
-                
-                <div class="icons">
-                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-twitter"></icon-icon></a>
-                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
-                </div>
-            </div>
-        </div>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+  <div class="container">
+      <div class="icon">
+        <!-- LOGO SPACE -->
+        <div class="logo-box"></div>
+        <h2 class="logo">CRIRS</h2>
+      </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Benefits">Service</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
+      </ul>
     </div>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="Home" class="hero">
+  <div class="container">
+    <h1> <span> Community <br> Resource & Issue <br> Reporting System</span></h1><br>
+    <div class="g">
+    <p class="par">
+      It is a digital platform that enables citizens to report incidents in their communities & <br> allows authorities to receive, manage, and respond to these reports efficiently.
+    </p>
+    <div class="btn-area">
+        <span>
+         <button class="cn" id="roleBtn">Join Us</button>
+        
+        <p>Already have an account?
+        <button class="btn" id="loginBtn">Let's Go!</button>
+        </p>
+        </span>
+      </div>
+      </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section style="color: white;" id="About" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">About CRIRS</h2>
+    <p class="text-center">
+        CRIRS is designed to help communities report problems such as road damage, water issues, crime, public health concerns, and other emergencies.
+        It connects citizens with responsible organizations and authorities for quick and effective action.
+    </p>
+  </div>
+</section>
+
+<!-- Service Section -->
+<section  id="Benefits" class="py-5">
+  <div class="container">
+    <h2 style="color: white;"  class="text-center mb-5" data-aos="fade-up">Our Services</h2>
+    <div class="row g-4" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="col-md-4">
+  <div class="card benefit-card p-3 text-center">
+    
+    <h5>Incident Reporting</h5>
+
+    <p>
+      Citizens can report issues <br>
+      <a href="#" class="seeMoreBtn" style="text-decoration: none; transition: 0.4s ease-in; color: #56ee56;">see more...</a>
+    </p>
+
+    <!-- Hidden content -->
+    <p class="moreText" style="display: none;">
+      Citizens can report road damage, accidents, insecurity, waste disposal problems,
+      water leakage, and other community issues directly to the responsible authorities.
+    </p>
+
+  </div>
+</div>
+
+      <div class="col-md-4">
+        <div class="card benefit-card p-3 text-center">
+          <h5>Tracking & Monitoring</h5>
+          <p>Users can track report progress <br>
+        <a href="#" class="seeMoreBtn" style="text-decoration: none; transition: 0.4s ease-in; color: #56ee56;">see more...</a></p> 
+        <!-- Hidden Content-->
+         <p class="moreText" style="display: none;">
+            CRIRS means the system allows users and authorities to follow the progress of every reported issue from the moment it is submitted until it is solved.
+         </p>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card benefit-card p-3 text-center">
+          <h5>Authority Management</h5>
+          <p>Organizations can receive reports. <br>
+        <a href="#" class="seeMoreBtn" style="text-decoration: none; transition: 0.4s ease-in; color: #56ee56;">see more...</a></p>
+        <!-- Hidden Content-->
+         <p class="moreText" style="display: none;">
+            It refers to how CRIRS helps government agencies, municipal councils, police, or community leaders manage reports efficiently 
+            Organisation can also assign tasks, and provide official responses to citizens.
+        </p>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card benefit-card p-3 text-center">
+          <h5>Community Awareness</h5>
+          <p>CRIRS increases transparency. <br>
+        <a href="#" class="seeMoreBtn" style="text-decoration: none; transition: 0.4s ease-in; color: #56ee56;">see more...</a></p>
+        <!-- Hidden Content-->
+         <p class="moreText" style="display: none;">
+            CRIRS helps inform and educate citizens about what is happening in their community
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact / Registration Section -->
+<section style="color: white;" id="Contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <p><strong>Email:</strong> </p>
+        <p><strong>Phone:</strong> +237</p>
+        <p><strong>Location:</strong> Cameroon</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-3 text-center">
+  <div class="container">
+    <p class="mb-0">
+      &copy; 2026 CRIRS - Community Resource & Issue Reporting System. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+
+<!-- LOGIN MODAL -->
+  <div id="loginModal">
+    <div class="form">
+      <h2>Login Here</h2>
+      <input type="email" placeholder="Enter your email">
+      <input type="password" placeholder="Enter your password">
+
+      <button class="btnn">Login</button>
+      <button class="btnn" id="closeBtn">Close</button>
+
+      <p style="color: white;" class="link">
+        Don't have an account? <br>
+        <a href="role.html">Sign up here</a>
+      </p>
+    </div>
+  </div>
+
+  <!--Role Modal-->
+  <div id="roleModal">
+        
+    <div class="form">
+                <h2>Role Placed</h2><br>
+       <p style="color: white;">User :</p> 
+        <a href="inscription.html"><button class="btnn">Sign In</button></a><br> <br>
+       <p style="color: white;">Organisation :</p> 
+        <a href="Ologin.html"><button class="btnn">Sign In</button></a><br> <br>
+
+       <a href="index.html"><button class="btnn" id="closBtn">Close</button></a>
+                
+            </div>
+          </div> 
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Add before closing body tag -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+<script src="interface.js"></script>
 </body>
 </html>
