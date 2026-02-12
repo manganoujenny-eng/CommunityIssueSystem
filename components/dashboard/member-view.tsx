@@ -28,7 +28,7 @@ export function MemberView() {
                         <CardHeader>
                             <CardTitle>Recent Activity</CardTitle>
                             <CardDescription>
-                                Updates on issues you've reported.
+                                Updates on issues you&apos;ve reported.
                             </CardDescription>
                         </CardHeader>
                         <CardContent>

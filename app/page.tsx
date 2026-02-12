@@ -6,6 +6,8 @@ import Link from "next/link";
 import { formatCurrency } from "@/lib/utils";
 import prisma from "@/lib/prisma";
 
+export const dynamic = 'force-dynamic';
+
 async function getSystemStats() {
     try {
         const [issueCount, resolvedCount, totalFunds, announcements, expenses] = await Promise.all([
@@ -106,7 +108,7 @@ export default async function Home() {
                                 <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Latest Updates</div>
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Community Announcements</h2>
                                 <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                                    Stay informed about what's happening in your neighborhood.
+                                    Stay informed about what&apos;s happening in your neighborhood.
                                 </p>
                             </div>
                         </div>

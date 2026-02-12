@@ -1,5 +1,7 @@
 import { RecentTransactions } from "@/components/financials/recent-transactions";
 import { formatCurrency } from "@/lib/utils";
+
+export const dynamic = 'force-dynamic'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MoveLeft, DollarSign, CreditCard, Activity } from "lucide-react";
 import Link from "next/link";

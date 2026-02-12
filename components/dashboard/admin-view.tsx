@@ -47,7 +47,7 @@ export function AdminView() {
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div className="text-2xl font-bold">$12,234.00</div>
+                            <div className="text-2xl font-bold">FCFA 7,500,000</div>
                             <p className="text-xs text-muted-foreground">
                                 +5% from last month
                             </p>

@@ -1,5 +1,18 @@
 {
-  "/not-found": "app/not-found.js",
+  "/_not-found": "app/_not-found.js",
   "/(auth)/login/page": "app/(auth)/login/page.js",
-  "/(dashboard)/dashboard/page": "app/(dashboard)/dashboard/page.js"
+  "/(auth)/register/page": "app/(auth)/register/page.js",
+  "/about/page": "app/about/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/issues/[id]/route": "app/api/issues/[id]/route.js",
+  "/api/register/route": "app/api/register/route.js",
+  "/api/financials/route": "app/api/financials/route.js",
+  "/api/issues/route": "app/api/issues/route.js",
+  "/page": "app/page.js",
+  "/(dashboard)/dashboard/page": "app/(dashboard)/dashboard/page.js",
+  "/(dashboard)/settings/page": "app/(dashboard)/settings/page.js",
+  "/(dashboard)/community/page": "app/(dashboard)/community/page.js",
+  "/(dashboard)/issues/page": "app/(dashboard)/issues/page.js",
+  "/(dashboard)/reports/page": "app/(dashboard)/reports/page.js",
+  "/(dashboard)/financials/page": "app/(dashboard)/financials/page.js"
 }

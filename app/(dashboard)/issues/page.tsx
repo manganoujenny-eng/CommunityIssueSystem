@@ -3,6 +3,8 @@ import { MoveLeft } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+export const dynamic = 'force-dynamic';
+
 export default function IssuesPage() {
     return (
         <div className="flex-1 space-y-4 p-8 pt-6">
