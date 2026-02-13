@@ -1,70 +1,91 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
+
+body{
+    overflow: hidden;
+}
+
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(com.jpeg);
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0,0,0,0.6)50%,rgba(0,0,0,0.6)50%), url(com.jpg);
     background-position: center;
     background-size: cover;
-    height: 109vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.form{
-    width: 250px;
-    height: 300px;
-    background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%);
-    transform: translate(-120%,40%);
-    position: relative;
-    top: -20px;
-    left: 870px;
-    border-radius: 10px;
-    padding: 25px;
+   
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
-.form h2{
-    width: 220px;
-    font-family: sans-serif;
-    text-align: center;
+
+.ins{
+    width: 350px;
+    
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    
+}
+
+.ins h2{
     color: #584dec;
-    font-size: 22px;
-    background: #fff;
+    background: white;
+    padding: 10px;
     border-radius: 10px;
-    margin: 2px;
-    padding: 8px;
+    margin-bottom: 20px;
 }
-.form label{
-    width: 240px;
-    height: 25px;
+
+.ins input{
+    width: 100%;
+    height: 40px;
     background: transparent;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    color: #fff;
+    border: none;
+    border-bottom: 1px solid #56ee56;
+    margin: 15px 0;
+    padding: 5px;
     font-size: 15px;
-    letter-spacing: 1px;
-    margin-top: 30px;
-    font-family: sans-serif;
-}
-.form label:focus{
+    color: white;
     outline: none;
 }
-.btnn{
-    width: 240px;
-    height: 40px;
-    background: #584dec;
-    border: none;
-    margin-top: 5px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #fff;
-    transition: 0.4s ease;
+
+    .btnn {
+      width: 100%;
+      height: 40px;
+      background: #56ee56;
+      border: none;
+      font-size: 17px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+      transition: 0.3s;
+      margin-bottom: 15px;
+    }
+
+    .btnn:hover {
+      background: white;
+      color: #61ce61;
+    }
+
+   /* Mobile Responsive */
+@media (max-width: 768px){
+    body{
+        overflow: auto;
+    }
+
+    .ins{
+        width: 95%;
+        max-width: 350px;
+    }
 }
-.btnn:hover{
-    background: #fff;
-    color: #584dec;
-}
-.btnn a{
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
+  

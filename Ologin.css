@@ -15,7 +15,6 @@ body{
     background: linear-gradient(to top, rgba(0,0,0,0.6)50%,rgba(0,0,0,0.6)50%), url(com.jpg);
     background-position: center;
     background-size: cover;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +29,7 @@ body{
 }
 
 .ins{
-    width: 350px;
+    width: 370px;
     
     padding: 30px;
     border-radius: 12px;
@@ -86,19 +85,18 @@ body{
 
 .btnn:hover{
     background: white;
-    color: #71d171;
+    color: #8be48b;
 }
 
-/* Error Message */
+/* Message */
 .error{
-    margin-top: 10px;
+    margin-top: 12px;
     color: red;
     font-size: 14px;
 }
 
-/* Success Message */
 .success{
-    margin-top: 10px;
+    margin-top: 12px;
     color: lightgreen;
     font-size: 14px;
 }
@@ -111,6 +109,6 @@ body{
 
     .ins{
         width: 95%;
-        max-width: 350px;
+        max-width: 370px;
     }
 }
